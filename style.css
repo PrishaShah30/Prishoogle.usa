@@ -1,0 +1,551 @@
+/* General Reset and Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000e31;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Background Animations */
+@keyframes bg-move-cloud {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 105%;
+  }
+}
+
+@keyframes bg-pulse-moon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+/* Background container positioning */
+#bg {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: -1; /* Place behind all content */
+}
+
+#bg * {
+  position: fixed;
+}
+/* Background animations */
+@keyframes bg-move-cloud {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 105%;
+  }
+}
+
+@keyframes bg-pulse-moon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+/* Animated elements */
+#bg__moon {
+  animation: bg-pulse-moon 4s linear 0s alternate infinite;
+  right: 2%;
+  top: 2%;
+}
+
+#bg__cloud1 {
+  animation: bg-move-cloud 48s linear -12s alternate infinite;
+  top: 9%;
+}
+
+#bg__cloud2 {
+  animation: bg-move-cloud 60s linear -78s alternate infinite;
+  top: 23%;
+}
+
+#bg__cloud3 {
+  animation: bg-move-cloud 80s linear -78s alternate infinite;
+  top: 15%;
+}
+
+/* Make all sections transparent */
+.content-section {
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Modify main container to work with background */
+.main-container {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* Ensure header stays on top */
+header {
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Make section backgrounds semi-transparent */
+#search {
+  background-color: transparent !important;
+}
+
+
+.about-box, 
+.experience-card, 
+.leadership-card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer adjustments */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure all text is visible on dark background */
+.about-box p,
+.about-box ul,
+.project-card p,
+.project-card ul,
+.experience-card p,
+.experience-card ul,
+.leadership-card p {
+  color: #ffffff;
+}
+
+/* Search section adjustments */
+.search-title {
+  background: linear-gradient(45deg, #64a8d1, #b3e0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Remove the cap class since we're removing the hat */
+.search-title .cap {
+  display: none;
+}
+
+.search-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-options {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-options ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* Modify your existing content styles to work with the dark background */
+.search-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center; /* Center the title */
+  padding-top: 3rem; /* Add space for the bell */
+}
+
+.content-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 60px; /* Header height */
+  position: relative; /* For footer positioning */
+}
+
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 60px; /* Space for footer */
+}
+
+/* Section Styling */
+section {
+  width: 100%;
+  min-height: calc(100vh - 60px); /* Account for header */
+  padding: 2rem;
+  margin-bottom: 60px; /* Space for footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section {
+  min-height: calc(100vh - 120px); /* Header and footer combined height */
+  padding: 80px 2rem 2rem; /* Prevent content cut-off */
+  background-color: #f4faff; /* Light subtle blue */
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.content-section.active {
+  display: block;
+  opacity: 1;
+}
+
+#search {
+  padding-top: 80px; /* Prevent content cut-off */
+  background-color: #b3daff; /* Light vibrant blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+/* Header Styling */
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000; /* Black */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-about {
+  font-size: 1rem;
+  color: #ffffff; /* White for contrast */
+  text-decoration: none;
+}
+
+.header-about:hover {
+  color: #64a8d1; /* Medium blue for hover */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-email {
+  color: #ffffff; /* White */
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-email:hover {
+  color: #64a8d1; /* Medium blue */
+}
+
+.header-dots {
+  font-size: 1.5rem;
+  color: #ffffff; /* White */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header-dots:hover {
+  color: #64a8d1; /* Medium blue */
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Section */
+#about {
+  background-color: #eaf6ff; /* Light blue */
+}
+.about-box h1,
+.about-box h2,
+.about-box p,
+.about-box ul,
+.about-box li {
+  color: #ffffff !important;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: left;
+  min-height: 250px;
+}
+
+.about-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-box p,
+.about-box ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-box ul {
+  padding-left: 1rem;
+}
+
+.about-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Search Section */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.search-title .bell {
+  font-size: 1.8rem;
+  position: absolute;
+  animation: bell-swing 1s infinite ease-in-out;
+  top: -90px;
+  right: -90px;
+  z-index: 2;
+  color: #e1ea92; 
+}
+
+@keyframes bell-swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(100, 168, 209, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-placeholder {
+  flex: 1;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.search-icons i {
+  font-size: 1.8rem;
+  color: #005a9c; /* Strong blue */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-icons i:hover {
+  color: #64a8d1; /* Medium blue */
+}
+
+/* Dropdown Options */
+.dropdown-options {
+
+  margin-top: 1rem;
+  display: none;
+  background-color: rgba(100, 168, 209, 0.15); /* Semi-transparent blue */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dropdown-options ul {
+  list-style: none; /* Remove bullet points */
+}
+
+.dropdown-options ul li {
+
+
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700; /* Make text bold */
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.dropdown-options ul li:hover {
+  background-color: #b3daff; /* Light vibrant blue */
+  border-radius: 10px;
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%;
+  padding: 1rem;
+  background-color: #000000; /* Black */
+  color: #ffffff; /* White */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-container p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+/* Profile image containers */
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.profile-image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Image overlay with caption */
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 14, 49, 0.8));
+  padding: 1rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover .image-caption {
+  transform: translateY(0);
+}

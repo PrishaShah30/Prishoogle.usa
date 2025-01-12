@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisha Shah</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Add this right after your opening <body> tag -->
+<div id="bg">
+  <svg id="bg__moon" height="100" width="100">
+    <circle cx="50" cy="50" r="35" fill="#64a8d1" />
+  </svg>
+  <svg id="bg__cloud1" height="100" width="200">
+    <g fill="#2a4b6f">
+      <path d="M40,50 L40,100 L160,100 L160,50 Z" />
+      <circle cx="40" cy="71" r="29" />
+      <circle cx="65" cy="50" r="22" />
+      <circle cx="110" cy="50" r="45" />
+      <circle cx="160" cy="68" r="32" />
+    </g>
+  </svg>
+  <svg id="bg__cloud2" height="100" width="200">
+    <g fill="#3a4b6f">
+      <path d="M40,50 L40,100 L160,100 L160,50 Z" />
+      <circle cx="40" cy="71" r="29" />
+      <circle cx="65" cy="50" r="22" />
+      <circle cx="110" cy="50" r="45" />
+      <circle cx="160" cy="68" r="32" />
+    </g>
+  </svg>
+  <svg id="bg__cloud3" height="100" width="200">
+    <g fill="#1a4b6f">
+      <path d="M40,50 L40,100 L160,100 L160,50 Z" />
+      <circle cx="40" cy="71" r="29" />
+      <circle cx="65" cy="50" r="22" />
+      <circle cx="110" cy="50" r="45" />
+      <circle cx="160" cy="68" r="32" />
+    </g>
+  </svg>
+</div>
+
+  <header>
+    <div class="header-container">
+      <a href="#about" class="header-about">About</a> <!-- This text dynamically changes -->
+      <div class="header-right">
+        <a href="mailto:shah2004prisha@gmail.com" class="header-email">
+          <i class="bx bx-envelope"></i> Gmail
+        </a>
+        <i class="bx bx-dots-horizontal-rounded header-dots"></i>
+        <div class="profile-image">
+          <img src="photo.png" alt="Profile" />
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main-container">
+
+    <section id="search">
+      <div class="search-container">
+        <h2 class="search-title">
+          (Prish)<span class="oo">oo</span>gle
+          <span class="bell">🔔</span>
+          <span class="cap"></span>
+        </h2>
+        
+        <div class="search-box" id="search-box">
+          <i class="bx bx-search search-icon"></i>
+          <span class="search-placeholder">Search (Prish)oogle</span>
+          <div class="search-icons">
+            <i class="bx bxs-microphone-alt" id="mic"></i>
+            <i class="bx bx-calendar-heart" id="book-call"></i>
+          </div>
+        </div>
+        <div class="dropdown-options" id="dropdown-options">
+          <ul>
+            <li id="nav-about">What is Prisha's background</li>
+            <li id="nav-experience">What is her experience</li>
+            <li id="nav-leadership">Leadership Roles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+      
+
+
+          <!-- Section 3: About Me -->
+          <section id="about" class="content-section active">
+            <div class="about-container">
+              <div class="about-box">
+                <h1>Hi, I'm Prisha Shah.</h1>
+                <p>
+                  I’m a junior at Rutgers University, double majoring in <strong>Computer Science and Data Science with an Economics track</strong>. I aspire to work at the crossroads of fintech, tech, and innovation, using automation, AWS, Azure, GCP, machine learning algorithms and statistical analysis, to transform big data into actionable insights. Fluent in Python, SQL, and the art of smooth talking, I specialize in making complex data understandable and delivering impactful results. Whether it's analyzing trends, building smarter systems, or explaining technical problems in layman's terms, I thrive on bridging the gap between tech and people. 
+                  When I'm not immersed in data or innovation, you’ll find me hiking and meditating, organizing cultural events, or debating the world’s most pressing issue: the best pizza toppings. My goal? To revolutionize how industries harness data—one breakthrough at a time.
+                </p>
+              </div>
+              <div class="profile-gallery">
+                <div class="profile-image-container">
+                  <img src="resized_image_4.jpeg" alt="Prisha at Work">
+                  <div class="image-caption">Prisha B Shah</div>
+                </div>
+                <div class="profile-image-container">
+                  <img src="resized_image_3.jpeg" alt="Prisha Speaking">
+                  <div class="image-caption">At Apexon</div>
+                </div>
+                <div class="profile-image-container">
+                  <img src="resized_image_1.jpeg" alt="Prisha Volunteering">
+                  <div class="image-caption">Leading the biggest RU Origins event</div>
+                </div>
+                <div class="profile-image-container">
+                  <img src="resized_image_2.jpeg" alt="Prisha Casual">
+                  <div class="image-caption">Collab event with Bloomberg from Data Science Club</div>
+                </div>
+              </div>
+              <div class="about-box">
+                <h2>Relevant Coursework</h2>
+                <ul>
+                  <li>Microeconomics and Macroeconomics</li>
+                  <li>Econometrics</li>
+                  <li>Data Management for Data Science</li>
+                  <li>Data Structures</li>
+                  <li>Introduction to Data Science</li>
+                  <li>Business Administration</li>
+                  <li>Statistics for Research</li>
+                  <li>Economics Intermediate Analysis</li>
+                </ul>
+              </div>
+              <div class="about-box">
+                <h2>Technical Skills</h2>
+                <ul>
+                  <li><strong>Languages:</strong> Python, SQL, Java, JavaScript, SQL/SAS, C/C++</li>
+                  <li><strong>Tools:</strong> Power BI, Tableau, Microsoft Excel, Streamlit, Git, VS Code, Eclipse</li>
+                  <li><strong>Frameworks:</strong> Pandas, Scikit-Learn, React.js, Node.js</li>
+                  <li><strong>Interests:</strong> Software Engineering, Financial Markets, Data Visualization and Research, AI/Machine Learning</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+      <section id="experience" class="content-section">
+        <div class="content">
+          <h2>Experience</h2>
+          <div class="experience-container">
+          
+            <!-- Hack4Impact -->
+            <div class="experience-card">
+              <img src="Hack4Impact_photo.png" alt="Hack4Impact Logo" class="company-logo">
+              <div class="experience-details">
+                <h3>Hack4Impact - Getting Connections</h3>
+                <p><strong>Software Developer</strong> | Oct 2024 - Present | New Brunswick, NJ</p>
+                <p><strong>Skills:</strong> Python, Tableau, Power BI, JavaScript</p>
+                <ul>
+                  <li>Developed a dynamic event calendar for Hack4Impact, a student club at Rutgers University, incorporating features like an admin panel, event alerts, and listings to enhance functionality and user engagement for nonprofit organizations.</li>
+                  <li>Collaborated with a cross-functional team of designers and developers to ensure seamless integration and alignment with project goals, contributing to user experience improvements and stakeholder satisfaction.</li>
+                  <li>Streamlined data visualization and reporting processes by designing interactive dashboards with Tableau and Power BI, enabling the tracking of market trends and consumer insights, and automating reporting workflows to improve efficiency by 20%.</li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Apexon -->
+            <div class="experience-card">
+              <img src="Apexon_photo.png" alt="Apexon Logo" class="company-logo">
+              <div class="experience-details">
+                <h3>Apexon</h3>
+                <p><strong>AI Intern</strong> | Jun 2024 – August 2024 | Princeton, NJ</p>
+                <p><strong>Skills:</strong> Python, Qdrant, Power BI, Microsoft Graph API, Azure AD</p>
+                <ul>
+                  <li>Designed and implemented a secure data retrieval system leveraging Azure AD B2C for user authentication and Microsoft Graph API for data integration.</li>
+                  <li>Built advanced data embeddings using Python and Qdrant to enable efficient query-based search and retrieval.</li>
+                  <li>Developed visualizations using Power BI to showcase insights on processed datasets, improving clarity by 25%.</li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- CGI -->
+            <div class="experience-card">
+              <img src="CGI_photo.png" alt="CGI Logo" class="company-logo">
+              <div class="experience-details">
+                <h3>CGI: IT Services and IT Consulting</h3>
+                <p><strong>Software Developer Extern</strong> | Jan 2024 – May 2024 | New Brunswick, NJ</p>
+                <p><strong>Skills:</strong> Python, Java, Anaconda, Streamlit OpenAI, Langchain, Power BI</p>
+                <ul>
+                  <li>Co-led the development of a synthetic data generator tailored for healthcare and multiple industry applications using Python, SQL, and Streamlit.</li>
+                  <li>Designed and integrated APIs to facilitate the generation and analysis of synthetic datasets, addressing data scarcity challenges.</li>
+                  <li>Visualized synthetic datasets using Power BI and statistical analysis to ensure data quality and domain relevance.</li>
+                  <li>Explored LangChain AI to enhance automation and streamline the synthetic data generation process.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+            
+      <!-- Section: Leadership & Extracurriculars -->
+<section id="leadership" class="content-section">
+    <div class="content">
+      <h2>Leadership & Extracurriculars</h2>
+      <div class="leadership-container">
+        <div class="leadership-card">
+          <h3>Alpha Omega Epsilon</h3>
+          <p><em>PSI Chapter</em></p>
+          <p><strong>Fall 2024 - Present | Rutgers University</strong></p>
+          <p>Member of a professional sorority for women in STEM, actively fostering leadership, networking, and community involvement while supporting and motivating women in engineering and technical sciences to access resources and opportunities on campus and off campus.</p>
+        </div>
+        <div class="leadership-card">
+          <h3>RU Origins</h3>
+          <p><em>Founder and President</em></p>
+          <p><strong>Spring 2024 - Present | Rutgers University</strong></p>
+          <p>Leading a mission to blend modern science with Eastern philosophy through meditation, sound bowl therapy, yoga, and discussions. Managed a budget of $3k+ and coordinated 60+ students for each event, ensuring smooth execution and impactful experiences.</p>
+        </div>
+        <div class="leadership-card">
+          <h3>Space Technology Association of Rutgers (STAR)</h3>
+          <p><em>Outreach Coordinator & Technical Team Member</em></p>
+          <p><strong>May 2024 - Present | Rutgers University</strong></p>
+          <p>
+            Worked on exciting projects like the STAR Weather Balloon team, programming Arduino sensors for scientific data collection. Helped organize outreach events, managing recruitment and coordination with tech-focused organizations.
+          </p>
+        </div>
+        <div class="leadership-card">
+          <h3>Data Science Club</h3>
+          <p><em>Outreach Coordinator</em></p>
+          <p><strong>April 2024 - Present | Rutgers University</strong></p>
+          <p>
+            Built relationships with professors, data science professionals, and tech clubs to organize speaker events. Promoted industry-focused recruitment opportunities and joint tech-focused events, improving club engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <p>United States</p>
+      <p>2025 © Welcome and welcome back to Prisha's World</p>
+    </div>
+  </footer>
+  
+</main>
+<script src="script.js"></script>
+
+</body>
+</html>
