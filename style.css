@@ -549,3 +549,22 @@ header {
 .profile-image-container:hover .image-caption {
   transform: translateY(0);
 }
+
+/* Styling for microphone and calendar icons */
+#mic {
+  color: #005a9c; /* Dark blue for initial state */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#mic:hover {
+  color: #64a8d1; /* Light blue on hover */
+}
+
+#book-call {
+  color: #005a9c; /* Dark blue for initial state */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#book-call:hover {
+  color: #64a8d1; /* Light blue on hover */
+}
